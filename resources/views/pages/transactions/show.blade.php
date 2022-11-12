@@ -38,21 +38,22 @@
                     <td>{{ $detail->product->type }}</td>
                     <td>{{ $detail->product->price }}</td>
                 </tr>
+                @endforeach
             </table>
         </td>
     </tr>
 </table>
-{{-- <div class="row">
+<div class="row">
     <div class="col-4">
-        <a href="{{ route('transactions.status'), $item->id }}?status=SUCCESS" class="btn btn-success btn-block">
+        <a href="{{ route('transactions.status', $item->id) }}?status=SUCCESS" class="btn btn-success btn-block">
         <i class="fa fa-check">Set Sukses</i></a>
     </div>
     <div class="col-4">
-        <a href="{{ route('transactions.status'), $item->id }}?status=FAILED" class="btn btn-warning btn-block">
+        <a href="{{ route('transactions.status', $item->id) }}?status=FAILED" class="btn btn-warning btn-block">
         <i class="fa fa-times">Set Gagal</i></a>
     </div>
     <div class="col-4">
-        <a href="{{ route('transactions.status'), $item->id }}?status=PENDING" class="btn btn-spinner btn-block">
-        <i class="fa fa-check">Set Pending</i></a>
+        <a href="{{ route('transactions.status', $item->id) }}?status=PENDING" class="btn btn-info btn-block">
+        <i class="fa fa-spinner">Set Pending</i></a>
     </div>
-</div> --}}
+</div>
